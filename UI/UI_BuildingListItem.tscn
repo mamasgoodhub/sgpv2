@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://btyb0247uvshu"]
+
+[ext_resource type="Texture2D" uid="uid://3bvcfa2exsjx" path="res://Assets/inventory_chopped.png" id="1_ii4cl"]
+[ext_resource type="Script" path="res://UI/UI_BuildingListItem.gd" id="2_kjbpf"]
+[ext_resource type="Texture2D" uid="uid://bb1s5fh1pc74j" path="res://Assets/red-exclamation-mark-triangle-shape-with-pixel-art-style_475147-718-removebg-preview.png" id="3_rnt5c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8deti"]
+atlas = ExtResource("1_ii4cl")
+region = Rect2(6, 149, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lodux"]
+atlas = ExtResource("1_ii4cl")
+region = Rect2(6, 120, 18, 18)
+
+[node name="UI_BuildingListItem" type="TextureButton"]
+custom_minimum_size = Vector2(90, 90)
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_8deti")
+texture_hover = SubResource("AtlasTexture_lodux")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("2_kjbpf")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(32, 32)
+
+[node name="WarnIcon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("3_rnt5c")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -58.0
+offset_top = -78.0
+offset_right = 202.0
+offset_bottom = -5.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="Panel/MarginContainer"]
+layout_mode = 2
+text = "Nicht genügend Holz vorhanden!"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]
