@@ -21,11 +21,7 @@ DatabaseService="*res://Services/DatabaseService.gd"
 GlobalSignals="*res://Manager/GlobalSignals.gd"
 BeehaveGlobalMetrics="*res://addons/beehave/metrics/beehave_global_metrics.gd"
 BeehaveGlobalDebugger="*res://addons/beehave/debug/global_debugger.gd"
-
-[debug]
-
-gdscript/warnings/unassigned_variable=2
-gdscript/warnings/untyped_declaration=2
+RoundManager="*res://RoundManager.gd"
 
 [display]
 
@@ -36,6 +32,10 @@ window/size/window_width_override=640
 window/size/window_height_override=320
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="sgpv2"
 
 [editor_plugins]
 

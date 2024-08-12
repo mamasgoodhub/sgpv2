@@ -13,14 +13,14 @@ script = ExtResource("2_qevyy")
 neededWorkers = 2
 produces = {
 0: 0,
-1: 5,
+1: 15,
 2: 0
 }
-name = "Pigfarm"
+name = "Schweinefarm"
 texture = SubResource("AtlasTexture_ln4g1")
 description = ""
 buildingNode = ExtResource("1_pvcnn")
 buildingCategory = 1
 buildingCost = 3
 energyCost = 12
-co2 = 15.0
+co2 = 60.0

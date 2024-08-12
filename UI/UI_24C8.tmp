@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://btyb0247uvshu"]
+[gd_scene load_steps=9 format=3 uid="uid://btyb0247uvshu"]
 
 [ext_resource type="Texture2D" uid="uid://3bvcfa2exsjx" path="res://Assets/inventory_chopped.png" id="1_ii4cl"]
 [ext_resource type="Script" path="res://UI/UI_BuildingListItem.gd" id="2_kjbpf"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://dhukhgaxj47up" path="res://Assets/energy.png" id="4_id8x7"]
 [ext_resource type="Texture2D" uid="uid://dtxrltywqle43" path="res://Assets/chickenleg.png" id="5_4lox7"]
 [ext_resource type="Texture2D" uid="uid://b7t75ug6c1201" path="res://Assets/wood.png" id="6_ea0tk"]
-[ext_resource type="Texture2D" uid="uid://bmicuuj4diqj4" path="res://Assets/FarmerRed.png" id="7_agyfy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8deti"]
 atlas = ExtResource("1_ii4cl")
@@ -15,10 +14,6 @@ region = Rect2(6, 149, 18, 18)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lodux"]
 atlas = ExtResource("1_ii4cl")
 region = Rect2(6, 120, 18, 18)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bbdq4"]
-atlas = ExtResource("7_agyfy")
-region = Rect2(0, 0, 16, 16)
 
 [node name="UI_BuildingListItem" type="TextureButton"]
 custom_minimum_size = Vector2(90, 90)
@@ -225,19 +220,6 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="Stats/MarginContainer/VBoxContainer/HSplitContainer/consumes_con/WoodContainer"]
-layout_mode = 2
-
-[node name="AlienContainer" type="HBoxContainer" parent="Stats/MarginContainer/VBoxContainer/HSplitContainer/consumes_con"]
-visible = false
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Stats/MarginContainer/VBoxContainer/HSplitContainer/consumes_con/AlienContainer"]
-layout_mode = 2
-texture = SubResource("AtlasTexture_bbdq4")
-expand_mode = 2
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="Stats/MarginContainer/VBoxContainer/HSplitContainer/consumes_con/AlienContainer"]
 layout_mode = 2
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

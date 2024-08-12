@@ -1,6 +1,8 @@
 class_name BuildingData
 extends Resource
 
+#Data-Klasse für Gebäude, alle benötigten Daten hier vordefiniert um später einzupflegen - Ähnlich Interface
+
 enum BUILDINGCATEGORY {
 	ENERGY,
 	FOOD,

@@ -1,5 +1,7 @@
 extends Camera2D
 
+#Codeleiche--------------------------------------------------------------
+
 #const DEAD_ZONE = 300
 #
 #func _input(event: InputEvent) -> void:
