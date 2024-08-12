@@ -4,7 +4,7 @@ extends Node
 #Balancing wurde noch nicht vorgenommen, weshalb das Spiel sehr unbalanced wirken kann
 
 var population: Array[Alien] = [load("res://Alien.tscn").instantiate(), load("res://Alien.tscn").instantiate(), load("res://Alien.tscn").instantiate(), load("res://Alien.tscn").instantiate()]
-var food: int = 10
+var food: int = 25
 var wood: int = 150
 var energy: int = 0
 var co2: int = 0
