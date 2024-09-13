@@ -1,5 +1,7 @@
 extends Node
 
+#CODELEICHE--------------------------------------------------------------------
+
 #var buildings: Array :
 	#set(building):
 		#pass

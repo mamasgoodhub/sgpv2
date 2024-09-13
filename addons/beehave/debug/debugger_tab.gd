@@ -21,10 +21,13 @@ var session: EditorDebuggerSession
 
 
 func _ready() -> void:
+	print("BeehaveDebuggerTab is ready.")
 	container = HSplitContainer.new()
 	add_child(container)
 
 	item_list = ItemList.new()
+	if item_list == null:
+		print("Error: item_list could not be initialized.")
 	item_list.custom_minimum_size = Vector2(200, 0)
 	item_list.item_selected.connect(_on_item_selected)
 	container.add_child(item_list)
@@ -77,6 +80,9 @@ func stop() -> void:
 
 
 func register_tree(data: Dictionary) -> void:
+	if item_list == null:
+		print("Error: item_list is null when trying to register a tree.")
+		return
 	var idx := item_list.add_item(data.name, TREE_ICON)
 	item_list.set_item_tooltip(idx, data.path)
 	item_list.set_item_metadata(idx, data.id)

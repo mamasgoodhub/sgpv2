@@ -1,10 +1,11 @@
 @tool
 extends EditorDebuggerPlugin
 
-const DebuggerTab := preload("debugger_tab.gd")
+const DebuggerTab := preload("res://addons/beehave/debug/debugger_tab.gd")
 const BeehaveUtils := preload("res://addons/beehave/utils/utils.gd")
 
-var debugger_tab := DebuggerTab.new()
+var debugger_tab: BeehaveDebuggerTab
+
 var floating_window: Window
 var session: EditorDebuggerSession
 
@@ -15,7 +16,9 @@ func _has_capture(prefix: String) -> bool:
 
 func _capture(message: String, data: Array, session_id: int) -> bool:
 	# in case the behavior tree has invalid setup this might be null
+	var debugger_tab := DebuggerTab.new()
 	if debugger_tab == null:
+		print("Debugger tab is null!")
 		return false
 	
 	if message == "beehave:register_tree":
@@ -57,7 +60,7 @@ func _on_make_floating() -> void:
 
 	var border_size := Vector2(4, 4) * BeehaveUtils.get_editor_scale()
 	var editor_interface: EditorInterface = plugin.get_editor_interface()
-	var editor_main_screen = editor_interface.get_editor_main_screen()
+	var editor_main_screen: VBoxContainer = editor_interface.get_editor_main_screen()
 	debugger_tab.get_parent().remove_child(debugger_tab)
 
 	floating_window = Window.new()

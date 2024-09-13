@@ -1,6 +1,8 @@
 class_name BuildingData
 extends Resource
 
+#Data-Klasse für Gebäude, alle benötigten Daten hier vordefiniert um später einzupflegen - Ähnlich Interface
+
 enum BUILDINGCATEGORY {
 	ENERGY,
 	FOOD,
@@ -17,4 +19,4 @@ enum BUILDINGCATEGORY {
 		return buildingCategory
 @export var buildingCost: int
 @export var energyCost: int
-@export var co2: float
+@export var co2: int

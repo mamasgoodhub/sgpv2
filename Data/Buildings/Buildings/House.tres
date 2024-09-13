@@ -11,11 +11,11 @@ region = Rect2(80, 416, 16, 16)
 [resource]
 resource_name = "House"
 script = ExtResource("2_0ge5k")
-name = "House"
+name = "Haus"
 texture = SubResource("AtlasTexture_1bdf5")
-description = "Ein simples Haus welches bis zu 10 Bewohner halten kann."
+description = "Ein simples Haus welches bis zu 2 Bewohner halten kann."
 buildingNode = ExtResource("1_c1385")
 buildingCategory = 3
 buildingCost = 15
 energyCost = 0
-co2 = 0.0
+co2 = 10

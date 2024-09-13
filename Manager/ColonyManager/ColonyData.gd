@@ -1,5 +1,7 @@
 extends Node
 
+#CODELEICHE---------------------------------------------------------------------------------------------
+
 #var population: Array[Alien] = [load("res://Alien.tscn").instantiate(), load("res://Alien.tscn").instantiate()]
 #
 #var buildings: Array
