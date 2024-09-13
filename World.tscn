@@ -270,7 +270,7 @@ layout_mode = 2
 [node name="LoseText" type="RichTextLabel" parent="CanvasLayer/LosePanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 20
-text = "Unsere Spezies ist verhungert. "
+text = "Wir haben kein Essen mehr. Dadurch ist unsere Spezies verhungert."
 fit_content = true
 scroll_active = false
 
@@ -317,7 +317,9 @@ layout_mode = 2
 [node name="LoseText" type="RichTextLabel" parent="CanvasLayer/LosePanel2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 20
-text = "Der Planet wurde zerstört. Es gibt kein zurück mehr. Wir haben versagt."
+text = "Der Planet wurde zerstört. Es gibt kein zurück mehr. Wir haben versagt.
+Dadurch, dass es keine Bäume mehr gibt, die das CO2 aufnehmen können, wird sich der Planet weiter aufheizen und unbewohnbar sein. 
+Versuche beim nächsten Mal nicht zu viel aufeinmal zu produzieren. Baue nur das was nötig ist, damit der nächste Planet sich schneller erholen kann."
 fit_content = true
 scroll_active = false
 
